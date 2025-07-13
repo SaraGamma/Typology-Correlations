@@ -28,14 +28,22 @@ const psychosophyTypes = [
 ];
 
 const mbtiToSociotypeMappings = {
-    'ENFP': ['IEE', 'EIE', 'ILE'], 'ENTP': ['ILE', 'EIE', 'LIE', 'IEE'],
-    'INFP': ['EII', 'ESI', 'IEI', 'SEI'], 'INTP': ['LII', 'ILI', 'ILE', 'LSI'],
-    'ENFJ': ['EIE', 'ESE', 'IEE'], 'ENTJ': ['LIE', 'LSE', 'SLE', 'LSI'],
-    'INFJ': ['IEI', 'EII', 'ILI'], 'INTJ': ['ILI', 'LII', 'LSI'],
-    'ESFP': ['SEE', 'ESE', 'SLE'], 'ESTP': ['SLE', 'SEE'],
-    'ISFP': ['ESI', 'EII', 'SEI'], 'ISTP': ['LSI', 'SLI'],
-    'ESFJ': ['ESE', 'EIE'], 'ESTJ': ['LSE', 'LIE', 'LSI', 'SLE'],
-    'ISFJ': ['SEI', 'EII', 'ESI'], 'ISTJ': ['SLI', 'LSI', 'LII']
+    'ENFP': ['IEE', 'EIE', 'ILE'], 
+    'ENTP': ['ILE', 'EIE', 'LIE', 'IEE'],
+    'INFP': ['EII', 'ESI', 'IEI', 'SEI'], 
+    'INTP': ['LII', 'ILI', 'ILE', 'LSI'],
+    'ENFJ': ['EIE', 'ESE', 'IEE'], 
+    'ENTJ': ['LIE', 'LSE', 'SLE', 'LSI'],
+    'INFJ': ['IEI', 'EII', 'ILI'], 
+    'INTJ': ['ILI', 'LII', 'LSI'],
+    'ESFP': ['SEE', 'ESE', 'SLE'], 
+    'ESTP': ['SLE', 'SEE'],
+    'ISFP': ['ESI', 'EII', 'SEI'], 
+    'ISTP': ['LSI', 'SLI'],
+    'ESFJ': ['ESE', 'EIE'], 
+    'ESTJ': ['LSE', 'LIE', 'LSI', 'SLE'],
+    'ISFJ': ['SEI', 'EII', 'ESI'], 
+    'ISTJ': ['SLI', 'LSI', 'LII']
 };
 
 const mbtiToEnneagramMappings = {
@@ -77,13 +85,20 @@ const mbtiToPsychosophyMappings = {
 };
 
 const enneagramToSocioMappings = {
-    'ILE': ['SO5', 'SP7', 'SO7'], 'SEI': ['SP6', 'SO9', 'SX9'],
-    'ESE': ['SP2', 'SX2', 'SX3', 'SO9'], 'LII': ['SO5', 'SO6'],
-    'EIE': ['SO2', 'SO3', 'SX4', 'SO7'], 'LSI': ['SO1', 'SX1', 'SO6', 'SX6'],
-    'SLE': ['SO3', 'SP8', 'SO8', 'SX8'], 'IEI': ['SO4', 'SX5', 'SP6'],
-    'SEE': ['SX2', 'SO3', 'SP7', 'SO8', 'SX8'], 'ILI': ['SP5', 'SO5', 'SX5'],
-    'LIE': ['SP3', 'SO3', 'SO1', 'SP7', 'SO7'], 'ESI': ['SP1', 'SP4', 'SX4'],
-    'LSE': ['SP1', 'SX1', 'SO1', 'SP3', 'SP8'], 'EII': ['SP4', 'SO4', 'SP6'],
+    'ILE': ['SO5', 'SP7', 'SO7'], 
+    'SEI': ['SP6', 'SO9', 'SX9'],
+    'ESE': ['SP2', 'SX2', 'SX3', 'SO9'], 
+    'LII': ['SO5', 'SO6'],
+    'EIE': ['SO2', 'SO3', 'SX4', 'SO7'], 
+    'LSI': ['SO1', 'SX1', 'SO6', 'SX6'],
+    'SLE': ['SO3', 'SP8', 'SO8', 'SX8'], 
+    'IEI': ['SO4', 'SX5', 'SP6'],
+    'SEE': ['SX2', 'SO3', 'SP7', 'SO8', 'SX8'], 
+    'ILI': ['SP5', 'SO5', 'SX5'],
+    'LIE': ['SP3', 'SO3', 'SO1', 'SP7', 'SO7'], 
+    'ESI': ['SP1', 'SP4', 'SX4'],
+    'LSE': ['SP1', 'SX1', 'SO1', 'SP3', 'SP8'], 
+    'EII': ['SP4', 'SO4', 'SP6'],
     'IEE': ['SX7', 'SO9'], 'SLI': ['SP5', 'SP9']
 };
 
