@@ -1,0 +1,152 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #07080d;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 15px;
+}
+
+.content-box {
+  background-color: #15171f;
+  padding: clamp(15px, 4vw, 25px);
+  border-radius: 15px;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#header {
+  margin-bottom: clamp(12px, 3vw, 20px);
+  text-align: center;
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+}
+
+#typology-switch-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: clamp(6px, 2vw, 10px);
+  margin-bottom: clamp(12px, 3vw, 20px);
+}
+
+.typology-switch-button {
+  flex: 1;
+  font-size: clamp(0.7rem, 2.5vw, 0.9rem);
+  padding: clamp(6px, 1.5vw, 8px);
+  font-weight: 500;
+  color: #fff;
+  background-color: #1a1c25;
+  border: 2px solid #1a1c25;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.typology-switch-button.hollow {
+  background-color: transparent;
+  border-color: #328561;
+  color: #328561;
+}
+
+.typology-switch-button.plain-selected {
+  color: #8c8c8c;
+  background-color: transparent;
+}
+
+.typology-switch-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+#button-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(6px, 2vw, 10px);
+  justify-content: center;
+}
+
+.type-button {
+  padding: clamp(8px, 2vw, 12px);
+  font-size: clamp(0.7rem, 2.5vw, 1rem);
+  font-weight: 600;
+  color: #fa9d65;
+  background-color: #1a1c25;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  min-width: clamp(60px, 22%, 100px);
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+.type-button.clicked {
+  background-color: #328561;
+  color: #fff;
+}
+
+.type-button:active {
+  transform: scale(0.96);
+}
+
+.type-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+@media (hover: hover) {
+  .type-button:hover:not(:disabled) {
+    background-color: #328561;
+    color: #fff;
+  }
+}
+
+#result-container {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+#final-result {
+  font-weight: bold;
+  color: #fa9d65;
+  font-size: clamp(1.5rem, 8vw, 3rem);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nav-buttons {
+  margin-top: clamp(15px, 4vw, 20px);
+  display: flex;
+  justify-content: center;
+}
+
+#restart-button {
+  display: none;
+  padding: clamp(10px, 2vw, 15px) clamp(20px, 4vw, 30px);
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  font-weight: bold;
+  color: #fff;
+  background-color: #328561;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
