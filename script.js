@@ -88,7 +88,7 @@ const enneagramToSocioMappings = {
     'ILE': ['SO5', 'SP7', 'SO7'], 
     'SEI': ['SP6', 'SO9', 'SX9'],
     'ESE': ['SP2', 'SX2', 'SX3', 'SO9'], 
-    'LII': ['SO5', 'SO6'],
+    'LII': ['SO5', 'SO6', 'SP5'],
     'EIE': ['SO2', 'SO3', 'SX4', 'SO7'], 
     'LSI': ['SO1', 'SX1', 'SO6', 'SX6'],
     'SLE': ['SO3', 'SP8', 'SO8', 'SX8'], 
