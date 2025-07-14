@@ -1,7 +1,7 @@
 const mbtiToSociotypeMappings = {
     'ENFP': ['IEE', 'EIE', 'ILE'],
     'ENTP': ['ILE', 'EIE', 'LIE', 'IEE'],
-    'INFP': ['EII', 'ESI', 'IEI', 'SEI'],
+    'INFP': ['EII', 'ESI', 'IEI'],
     'INTP': ['LII', 'ILI', 'ILE'],
     'ENFJ': ['EIE', 'ESE', 'IEE'],
     'ENTJ': ['LIE', 'LSE', 'SLE', 'LSI'],
@@ -14,7 +14,7 @@ const mbtiToSociotypeMappings = {
     'ESFJ': ['ESE', 'EIE'],
     'ESTJ': ['LSE', 'LIE', 'LSI', 'SLE'],
     'ISFJ': ['SEI', 'EII', 'ESI'],
-    'ISTJ': ['SLI', 'LSI', 'LII']
+    'ISTJ': ['SLI', 'LSI']
 };
 
 const mbtiToEnneagramMappings = {
