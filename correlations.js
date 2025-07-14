@@ -2,11 +2,11 @@ const mbtiToSociotypeMappings = {
     'ENFP': ['IEE', 'EIE', 'ILE'],
     'ENTP': ['ILE', 'EIE', 'LIE', 'IEE'],
     'INFP': ['EII', 'ESI', 'IEI', 'SEI'],
-    'INTP': ['LII', 'ILI', 'ILE', 'LSI'],
+    'INTP': ['LII', 'ILI', 'ILE'],
     'ENFJ': ['EIE', 'ESE', 'IEE'],
     'ENTJ': ['LIE', 'LSE', 'SLE', 'LSI'],
     'INFJ': ['IEI', 'EII', 'ILI'],
-    'INTJ': ['ILI', 'LII', 'LSI'],
+    'INTJ': ['ILI', 'LII',],
     'ESFP': ['SEE', 'ESE', 'SLE'],
     'ESTP': ['SLE', 'SEE'],
     'ISFP': ['ESI', 'EII', 'SEI'],
@@ -18,22 +18,22 @@ const mbtiToSociotypeMappings = {
 };
 
 const mbtiToEnneagramMappings = {
-    'INTJ': ['SP5', 'SO5', 'SX5', 'SO1', 'SP6', 'SP1', 'SX1', 'SO4', 'SP4'],
-    'INTP': ['SO5', 'SP5', 'SP6', 'SO6', 'SO1', 'SP1', 'SP9', 'SX5'],
-    'ENTJ': ['SP3', 'SO3', 'SO1', 'SP7', 'SO8', 'SX1', 'SX6', 'SP8'],
-    'ENTP': ['SP7', 'SO7', 'SO5', 'SX7', 'SO3', 'SP3', 'SX6', 'SO9', 'SP9', 'SP5'],
-    'INFJ': ['SO4', 'SX5', 'SP6', 'SP4', 'SX4', 'SO9', 'SP9', 'SO2', 'SP5'],
-    'INFP': ['SP4', 'SO4', 'SP6', 'SO9', 'SP9', 'SO6', 'SP1', 'SO2', 'SX4', 'SP5'],
-    'ENFJ': ['SO2', 'SX2', 'SO3', 'SX4', 'SO7', 'SO1', 'SX1', 'SP2', 'SX7'],
-    'ENFP': ['SX7', 'SO7', 'SP7', 'SO2', 'SX2', 'SO4', 'SX4', 'SP2', 'SO9', 'SO3'],
-    'ISTJ': ['SP9', 'SO6', 'SP6', 'SP1', 'SX6', 'SO9', 'SP5'],
-    'ISFJ': ['SP9', 'SO9', 'SP2', 'SO2', 'SP6', 'SO6', 'SX9', 'SP1', 'SO1'],
-    'ESTJ': ['SO1', 'SP3', 'SP1', 'SO3', 'SO8', 'SX1', 'SP8', 'SO6', 'SP6'],
-    'ESFJ': ['SO2', 'SP2', 'SO9', 'SP9', 'SO3', 'SX2', 'SX3', 'SO1', 'SP1', 'SO7'],
-    'ISTP': ['SX6', 'SP5', 'SO6', 'SP9', 'SO1', 'SX1', 'SP1', 'SP8', 'SX5', 'SO5'],
-    'ISFP': ['SP4', 'SX6', 'SP1', 'SO6', 'SP6', 'SX4', 'SO4', 'SP9', 'SX9', 'SP2'],
-    'ESTP': ['SX6', 'SP8', 'SO8', 'SX8', 'SP7', 'SO3', 'SP3', 'SO7', 'SX1'],
-    'ESFP': ['SX2', 'SO8', 'SP7', 'SX8', 'SO3', 'SP3', 'SO7', 'SX7', 'SP2', 'SP8', 'SX4']
+    'INTJ': ['SP5', 'SO5', 'SX5', 'SO6'],
+    'INTP': ['SP5', 'SO5', 'SX5', 'SP6', 'SO6'],
+    'ENTJ': ['SO1', 'SX1', 'SP3', 'SO3', 'SX6', 'SP7', 'SP8', 'SO8'],
+    'ENTP': ['SO5', 'SP7', 'SO7', 'SX7'],
+    'INFJ': ['SP4', 'SO4', 'SP5', 'SX5', 'SP6'],
+    'INFP': ['SP4', 'SO4', 'SX4', 'SP6'],
+    'ENFJ': ['SO2', 'SX2', 'SO3', 'SO7', 'SX7'],
+    'ENFP': ['SX4', 'SO7', 'SX7'],
+    'ISTJ': ['SP5', 'SO6', 'SP9'],
+    'ISFJ': ['SP1', 'SP6', 'SO9', 'SX9'],
+    'ESTJ': ['SP1', 'SO1', 'SX1', 'SP3', 'SO3', 'SP8', 'SO8'],
+    'ESFJ': ['SP2', 'SO2', 'SX2', 'SO3', 'SX3', 'SO7', 'SO9'],
+    'ISTP': ['SP5', 'SO6', 'SX6', 'SP9'],
+    'ISFP': ['SP4', 'SO4', 'SX4', 'SX9'],
+    'ESTP': ['SO3', 'SP7', 'SP8', 'SO8', 'SX8'],
+    'ESFP': ['SX3', 'SP7', 'SP8', 'SO8', 'SX8']
 };
 
 const mbtiToPsychosophyMappings = {
@@ -63,14 +63,15 @@ const enneagramToSocioMappings = {
     'EIE': ['SO2', 'SO3', 'SX4', 'SO7'],
     'LSI': ['SO1', 'SX1', 'SO6', 'SX6'],
     'SLE': ['SO3', 'SP8', 'SO8', 'SX8'],
-    'IEI': ['SO4', 'SX5', 'SP6'],
+    'IEI': ['SO4', 'SX5'],
     'SEE': ['SX2', 'SO3', 'SP7', 'SO8', 'SX8'],
     'ILI': ['SP5', 'SO5', 'SX5'],
     'LIE': ['SP3', 'SO3', 'SO1', 'SP7', 'SO7'],
     'ESI': ['SP1', 'SP4', 'SX4'],
     'LSE': ['SP1', 'SX1', 'SO1', 'SP3', 'SP8'],
     'EII': ['SP4', 'SO4', 'SP6'],
-    'IEE': ['SX7', 'SO9'], 'SLI': ['SP5', 'SP9']
+    'IEE': ['SX7', 'SO7'], 
+    'SLI': ['SP5', 'SP9']
 };
 
 const enneagramToPsychosophyMappings = {
@@ -87,7 +88,7 @@ const enneagramToPsychosophyMappings = {
     'so4': ['EVLF', 'ELVF', 'EVFL'],
     'sx4': ['ELVF', 'EFVL'],
     'sp5': ['LFEV', 'LVEF', 'LEVF', 'FLEV'],
-    'so5': ['VLEF', 'LVEF', 'LEVF'],
+    'so5': ['VLEF', 'LVEF',],
     'sx5': ['LFEV', 'LEFV', 'LVEF', 'LEVF'],
     'sp6': ['LEFV'],
     'so6': ['LVFE', 'LFVE', 'LVEF'],
@@ -95,9 +96,9 @@ const enneagramToPsychosophyMappings = {
     'sp7': ['FVLE', 'FLVE', 'VLFE', 'FLEV'],
     'so7': ['EVLF', 'VLEF', 'VELF'],
     'sx7': ['EVLF', 'ELVF', 'ELFV'],
-    'sp8': ['FVLE', 'FVEL'],
-    'so8': ['FVLE', 'FVEL'],
-    'sx8': ['FVLE', 'FVEL'],
+    'sp8': ['VFLE', 'VFEL'],
+    'so8': ['FVLE', 'VFLE', 'VFEL'],
+    'sx8': ['VFLE', 'VFEL'],
     'sp9': ['FLEV', 'FELV', 'FVEL'],
     'so9': ['EVFL', 'EFLV', 'FELV'],
     'sx9': ['EFLV', 'FELV']
