@@ -38,7 +38,7 @@ const mbtiToEnneagramMappings = {
 
 const mbtiToPsychosophyMappings = {
     'INTP': ['LVEF', 'LVFE', 'LEVF', 'LEFV', 'LFVE', 'LFEV', 'VLEF', 'VLFE', 'ELVF', 'ELFV', 'FLVE', 'FLEV'],
-    'ENTP': ['VLEF', 'VLFE', 'LVEF', 'LVFE', 'LEVF', 'LEFV', 'LFVE', 'LFEV', 'VELF', 'VEFL', 'ELVF', 'ELFV', 'FLVE', 'FLEV'],
+    'ENTP': ['VLEF', 'VLFE', 'LVEF', 'LVFE', 'LEVF', 'LEFV', 'LFVE', 'LFEV', 'ELVF', 'ELFV', 'FLVE', 'FLEV'],
     'INTJ': ['LVEF', 'LVFE', 'VLEF', 'VLFE', 'LEVF', 'LEFV', 'LFVE', 'LFEV', 'VFLE', 'VFEL', 'FLVE', 'FLEV'],
     'ENTJ': ['VLEF', 'VLFE', 'VFLE', 'VFEL', 'LVEF', 'LVFE', 'LEVF', 'LEFV', 'LFVE', 'LFEV', 'VELF', 'VEFL'],
     'INFP': ['VELF', 'EVLF', 'ELVF', 'LVFE', 'LEVF', 'LEFV', 'VLFE', 'VEFL', 'EVFL', 'ELFV', 'EFVL', 'EFLV', 'FVEL', 'FVLE', 'FEVL', 'FELV'],
