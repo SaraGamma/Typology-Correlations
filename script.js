@@ -5,14 +5,14 @@ const mbtiTypes = [
     'ISTP', 'ISFP', 'ESTP', 'ESFP'
 ];
 
-const socioTypes = [
+const socionicsTypes = [
     'ILE', 'SEI', 'ESE', 'LII',
     'EIE', 'LSI', 'SLE', 'IEI',
     'SEE', 'ILI', 'LIE', 'ESI',
     'LSE', 'EII', 'IEE', 'SLI'
 ];
 
-const enneagramSubtypes = [
+const enneagramTypes = [
     'SP1', 'SO1', 'SX1', 'SP2', 'SO2', 'SX2',
     'SP3', 'SO3', 'SX3', 'SP4', 'SO4', 'SX4',
     'SP5', 'SO5', 'SX5', 'SP6', 'SO6', 'SX6',
@@ -27,8 +27,8 @@ const psychosophyTypes = [
     'FLVE', 'FLEV', 'FVEL', 'FVLE', 'FELV', 'FEVL'
 ];
 
-const headers = { mbti: "Select your MBTI type", socionics: "Select your Socionics type", enneagram: "Select your Enneagram subtype", psychosophy: "Select your Psychosophy type" };
-const allSystems = { mbti: mbtiTypes, socionics: socioTypes, enneagram: enneagramSubtypes, psychosophy: psychosophyTypes };
+const headers = { mbti: "Select your MBTI type", socionics: "Select your Socionics type", enneagram: "Select your Enneagram type", psychosophy: "Select your Psychosophy type" };
+const allSystems = { mbti: mbtiTypes, socionics: socionicsTypes, enneagram: enneagramTypes, psychosophy: psychosophyTypes };
 let canonicalOrder = ['mbti', 'socionics', 'enneagram', 'psychosophy'];
 let selections = {};
 
@@ -37,8 +37,8 @@ let buttonContainer, resultContainer, finalResultDisplay, restartButton, header,
 function getPotentialTypes(currentSelections) {
   let p = {
     mbti: currentSelections.mbti ? [currentSelections.mbti] : [...mbtiTypes],
-    socionics: currentSelections.socionics ? [currentSelections.socionics] : [...socioTypes],
-    enneagram: currentSelections.enneagram ? [currentSelections.enneagram] : [...enneagramSubtypes],
+    socionics: currentSelections.socionics ? [currentSelections.socionics] : [...socionicsTypes],
+    enneagram: currentSelections.enneagram ? [currentSelections.enneagram] : [...enneagramTypes],
     psychosophy: currentSelections.psychosophy ? [currentSelections.psychosophy] : [...psychosophyTypes]
   };
   let hasChanged = true;
@@ -47,30 +47,32 @@ function getPotentialTypes(currentSelections) {
     const counts = { mbti: p.mbti.length, socionics: p.socionics.length, enneagram: p.enneagram.length, psychosophy: p.psychosophy.length };
     
     p.mbti = p.mbti.filter(m => {
-      const compatibleWithSocio = p.socionics.some(s => (mbtiToSociotypeMappings[m] || []).includes(s));
+      const compatibleWithSocionics = p.socionics.some(s => (mbtiToSocionicsMappings[m] || []).includes(s));
       const compatibleWithEnneagram = p.enneagram.some(e => (mbtiToEnneagramMappings[m] || []).includes(e));
       const compatibleWithPsychosophy = p.psychosophy.some(ps => (mbtiToPsychosophyMappings[m] || []).includes(ps));
-      return compatibleWithSocio && compatibleWithEnneagram && compatibleWithPsychosophy;
+      return compatibleWithSocionics && compatibleWithEnneagram && compatibleWithPsychosophy;
     });
 
     p.socionics = p.socionics.filter(s => {
-      const compatibleWithMbti = p.mbti.some(m => (mbtiToSociotypeMappings[m] || []).includes(s));
-      const compatibleWithEnneagram = p.enneagram.some(e => (enneagramToSocioMappings[s] || []).includes(e));
-      return compatibleWithMbti && compatibleWithEnneagram;
+      const compatibleWithMbti = p.mbti.some(m => (mbtiToSocionicsMappings[m] || []).includes(s));
+      const compatibleWithEnneagram = p.enneagram.some(e => (enneagramToSocionicsMappings[s] || []).includes(e));
+      const compatibleWithPsychosophy = p.psychosophy.some(ps => (socionicsToPsychosophyMappings[s] || []).includes(ps));
+      return compatibleWithMbti && compatibleWithEnneagram && compatibleWithPsychosophy;
     });
 
     p.enneagram = p.enneagram.filter(e => {
       const eLower = e.toLowerCase();
       const compatibleWithMbti = p.mbti.some(m => (mbtiToEnneagramMappings[m] || []).includes(e));
-      const compatibleWithSocio = p.socionics.some(s => (enneagramToSocioMappings[s] || []).includes(e));
+      const compatibleWithSocionics = p.socionics.some(s => (enneagramToSocionicsMappings[s] || []).includes(e));
       const compatibleWithPsychosophy = p.psychosophy.some(ps => (enneagramToPsychosophyMappings[eLower] || []).includes(ps));
-      return compatibleWithMbti && compatibleWithSocio && compatibleWithPsychosophy;
+      return compatibleWithMbti && compatibleWithSocionics && compatibleWithPsychosophy;
     });
 
     p.psychosophy = p.psychosophy.filter(ps => {
       const compatibleWithMbti = p.mbti.some(m => (mbtiToPsychosophyMappings[m] || []).includes(ps));
       const compatibleWithEnneagram = p.enneagram.some(e => (enneagramToPsychosophyMappings[e.toLowerCase()] || []).includes(ps));
-      return compatibleWithMbti && compatibleWithEnneagram;
+      const compatibleWithSocionics = p.socionics.some(s => (socionicsToPsychosophyMappings[s] || []).includes(ps));
+      return compatibleWithMbti && compatibleWithEnneagram && compatibleWithSocionics;
     });
 
     if (p.mbti.length < counts.mbti || p.socionics.length < counts.socionics || p.enneagram.length < counts.enneagram || p.psychosophy.length < counts.psychosophy) {
@@ -181,4 +183,3 @@ document.addEventListener('DOMContentLoaded', () => {
   
   showSelectionView();
 });
-

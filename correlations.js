@@ -1,4 +1,4 @@
-const mbtiToSociotypeMappings = {
+const mbtiToSocionicsMappings = {
     'ENFP': ['IEE', 'EIE', 'ILE'],
     'ENTP': ['ILE', 'EIE', 'LIE', 'IEE'],
     'INFP': ['EII', 'ESI', 'IEI'],
@@ -55,7 +55,7 @@ const mbtiToPsychosophyMappings = {
     'ESFJ': ['EFVL', 'EFLV', 'FVEL', 'FVLE', 'FEVL', 'FELV', 'VELF', 'VEFL', 'EVLF', 'EVFL', 'ELFV']
 };
 
-const enneagramToSocioMappings = {
+const enneagramToSocionicsMappings = {
     'ILE': ['SP7', 'SO7'],
     'SEI': ['SP6', 'SO9', 'SX9'],
     'ESE': ['SP2', 'SX2', 'SX3', 'SO9'],
@@ -70,7 +70,7 @@ const enneagramToSocioMappings = {
     'ESI': ['SP1', 'SP4', 'SX4'],
     'LSE': ['SP1', 'SX1', 'SO1', 'SP3', 'SP8'],
     'EII': ['SP4', 'SO4', 'SP6'],
-    'IEE': ['SX7', 'SO7'], 
+    'IEE': ['SX7', 'SO7'],
     'SLI': ['SP5', 'SP9']
 };
 
@@ -102,4 +102,23 @@ const enneagramToPsychosophyMappings = {
     'sp9': ['FLEV', 'FELV', 'FVEL'],
     'so9': ['EVFL', 'EFLV', 'FELV'],
     'sx9': ['EFLV', 'FELV']
+};
+
+const socionicsToPsychosophyMappings = {
+    'ILE': ['LVEF', 'LVFE', 'LEVF', 'LEFV', 'LFVE', 'LFEV', 'VLEF', 'VLFE', 'VELF', 'VEFL', 'VFLE', 'VFEL', 'ELVF', 'ELFV', 'EVLF', 'EVFL', 'EFLV', 'EFVL', 'FLVE', 'FLEV', 'FVEL', 'FVLE', 'FELV', 'FEVL'],
+    'SEI': ['LVEF', 'LVFE', 'LEVF', 'LEFV', 'LFVE', 'LFEV', 'VLEF', 'VLFE', 'VELF', 'VEFL', 'VFLE', 'VFEL', 'ELVF', 'ELFV', 'EVLF', 'EVFL', 'EFLV', 'EFVL', 'FLVE', 'FLEV', 'FVEL', 'FVLE', 'FELV', 'FEVL'],
+    'ESE': ['LVEF', 'LVFE', 'LEVF', 'LEFV', 'LFVE', 'LFEV', 'VLEF', 'VLFE', 'VELF', 'VEFL', 'VFLE', 'VFEL', 'ELVF', 'ELFV', 'EVLF', 'EVFL', 'EFLV', 'EFVL', 'FLVE', 'FLEV', 'FVEL', 'FVLE', 'FELV', 'FEVL'],
+    'LII': ['LVEF', 'LVFE', 'LEVF', 'LEFV', 'LFVE', 'LFEV', 'VLEF', 'VLFE', 'VELF', 'VEFL', 'VFLE', 'VFEL', 'ELVF', 'ELFV', 'EVLF', 'EVFL', 'EFLV', 'EFVL', 'FLVE', 'FLEV', 'FVEL', 'FVLE', 'FELV', 'FEVL'],
+    'EIE': ['LVEF', 'LVFE', 'LEVF', 'LEFV', 'LFVE', 'LFEV', 'VLEF', 'VLFE', 'VELF', 'VEFL', 'VFLE', 'VFEL', 'ELVF', 'ELFV', 'EVLF', 'EVFL', 'EFLV', 'EFVL', 'FLVE', 'FLEV', 'FVEL', 'FVLE', 'FELV', 'FEVL'],
+    'LSI': ['LVEF', 'LVFE', 'LEVF', 'LEFV', 'LFVE', 'LFEV', 'VLEF', 'VLFE', 'VELF', 'VEFL', 'VFLE', 'VFEL', 'ELVF', 'ELFV', 'EVLF', 'EVFL', 'EFLV', 'EFVL', 'FLVE', 'FLEV', 'FVEL', 'FVLE', 'FELV', 'FEVL'],
+    'SLE': ['LVEF', 'LVFE', 'LEVF', 'LEFV', 'LFVE', 'LFEV', 'VLEF', 'VLFE', 'VELF', 'VEFL', 'VFLE', 'VFEL', 'ELVF', 'ELFV', 'EVLF', 'EVFL', 'EFLV', 'EFVL', 'FLVE', 'FLEV', 'FVEL', 'FVLE', 'FELV', 'FEVL'],
+    'IEI': ['LVEF', 'LVFE', 'LEVF', 'LEFV', 'LFVE', 'LFEV', 'VLEF', 'VLFE', 'VELF', 'VEFL', 'VFLE', 'VFEL', 'ELVF', 'ELFV', 'EVLF', 'EVFL', 'EFLV', 'EFVL', 'FLVE', 'FLEV', 'FVEL', 'FVLE', 'FELV', 'FEVL'],
+    'SEE': ['LVEF', 'LVFE', 'LEVF', 'LEFV', 'LFVE', 'LFEV', 'VLEF', 'VLFE', 'VELF', 'VEFL', 'VFLE', 'VFEL', 'ELVF', 'ELFV', 'EVLF', 'EVFL', 'EFLV', 'EFVL', 'FLVE', 'FLEV', 'FVEL', 'FVLE', 'FELV', 'FEVL'],
+    'ILI': ['LVEF', 'LVFE', 'LEVF', 'LEFV', 'LFVE', 'LFEV', 'VLEF', 'VLFE', 'VELF', 'VEFL', 'VFLE', 'VFEL', 'ELVF', 'ELFV', 'EVLF', 'EVFL', 'EFLV', 'EFVL', 'FLVE', 'FLEV', 'FVEL', 'FVLE', 'FELV', 'FEVL'],
+    'LIE': ['LVEF', 'LVFE', 'LEVF', 'LEFV', 'LFVE', 'LFEV', 'VLEF', 'VLFE', 'VELF', 'VEFL', 'VFLE', 'VFEL', 'ELVF', 'ELFV', 'EVLF', 'EVFL', 'EFLV', 'EFVL', 'FLVE', 'FLEV', 'FVEL', 'FVLE', 'FELV', 'FEVL'],
+    'ESI': ['LVEF', 'LVFE', 'LEVF', 'LEFV', 'LFVE', 'LFEV', 'VLEF', 'VLFE', 'VELF', 'VEFL', 'VFLE', 'VFEL', 'ELVF', 'ELFV', 'EVLF', 'EVFL', 'EFLV', 'EFVL', 'FLVE', 'FLEV', 'FVEL', 'FVLE', 'FELV', 'FEVL'],
+    'LSE': ['LVEF', 'LVFE', 'LEVF', 'LEFV', 'LFVE', 'LFEV', 'VLEF', 'VLFE', 'VELF', 'VEFL', 'VFLE', 'VFEL', 'ELVF', 'ELFV', 'EVLF', 'EVFL', 'EFLV', 'EFVL', 'FLVE', 'FLEV', 'FVEL', 'FVLE', 'FELV', 'FEVL'],
+    'EII': ['LVEF', 'LVFE', 'LEVF', 'LEFV', 'LFVE', 'LFEV', 'VLEF', 'VLFE', 'VELF', 'VEFL', 'VFLE', 'VFEL', 'ELVF', 'ELFV', 'EVLF', 'EVFL', 'EFLV', 'EFVL', 'FLVE', 'FLEV', 'FVEL', 'FVLE', 'FELV', 'FEVL'],
+    'IEE': ['LVEF', 'LVFE', 'LEVF', 'LEFV', 'LFVE', 'LFEV', 'VLEF', 'VLFE', 'VELF', 'VEFL', 'VFLE', 'VFEL', 'ELVF', 'ELFV', 'EVLF', 'EVFL', 'EFLV', 'EFVL', 'FLVE', 'FLEV', 'FVEL', 'FVLE', 'FELV', 'FEVL'],
+    'SLI': ['LVEF', 'LVFE', 'LEVF', 'LEFV', 'LFVE', 'LFEV', 'VLEF', 'VLFE', 'VELF', 'VEFL', 'VFLE', 'VFEL', 'ELVF', 'ELFV', 'EVLF', 'EVFL', 'EFLV', 'EFVL', 'FLVE', 'FLEV', 'FVEL', 'FVLE', 'FELV', 'FEVL']
 };
