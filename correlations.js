@@ -82,7 +82,7 @@ const enneagramToPsychosophyMappings = {
     'so2': ['VEFL', 'VELF'],
     'sx2': ['EFVL', 'FEVL'],
     'sp3': ['FVLE', 'VLFE', 'VFLE'],
-    'so3': ['FVLE', 'FLVE', 'VLFE'],
+    'so3': ['FVLE', 'FLVE'],
     'sx3': ['FELV', 'FEVL'],
     'sp4': ['EVFL', 'EFLV', 'FVEL'],
     'so4': ['EVLF', 'ELVF', 'EVFL'],
